@@ -99,6 +99,18 @@ function kartTiklama(olay) {
     const kacPuan = document.querySelector("#puan span");
     kacPuan.innerText = parseInt(tumEslesenKartlar.length) / 2;
 
+    let skor = parseInt(tumEslesenKartlar.length) / 2;
+    if (skor === 4) {
+        let tebrik = document.querySelector("#kutlamaGif");
+        document.querySelector("#kutlamaGif img").src = `./img/giphy+++++.gif`;
+        setTimeout(() => {
+            tebrik.classList.add("sil");
+        }, 5000);
+
+
+    }
+
+
 
 
 
