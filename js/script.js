@@ -10,10 +10,27 @@ const kartTemplate = `
     </div>
 `;
 
+function randomSayi(min, max) {
+    return Math.floor(Math.random() * (max - min)) + min;;
+}
+
+const resm1 = randomSayi(1, 70);
+const resm2 = resm1 + 10;
+const resm3 = resm1 + 20;
+const resm4 = resm1 + 30;
+
 const fotoNumaralari = [
-    10, 20, 30, 20,
-    10, 40, 40, 30
+    resm1, resm2, resm3, resm4,
+    resm1, resm2, resm3, resm4
 ];
+
+
+function yeniRandomSayi(fotoNumaralari) {
+    return fotoNumaralari.sort(() => Math.random() > 0.5 ? 1 : -1).slice(0, 8)
+}
+
+
+yeniRandomSayi(fotoNumaralari);
 
 
 
